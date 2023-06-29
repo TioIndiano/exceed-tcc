@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+		initial-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora De Calorias</title>
+    <link rel="stylesheet" href="../css/calculadoraCaloria.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        class="logo"
+        src="../assets/logo-green.svg"
+        alt="Logo do Ti. site do Juan"
+      />
+      <nav class="navbar">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../pages/activity.html" class="nav-link">Exercícios</a>
+          </li>
+          <li class="nav-item">
+            <a href="../pages/nutricao.html" class="nav-link">Nutrição</a>
+          </li>
+          <li class="nav-item">
+            <a href="../pages/diary.html" class="nav-link">Diário</a>
+          </li>
+          <li class="nav-item">
+            <a href="../pages/study.html" class="nav-link">Estudos</a>
+          </li>
+        </ul>
+        <div class="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+      <div class="content">
+        <form id="form">
+          <div class="form-group">
+            <label for="gender">Seu sexo</label>
+            <select id="gender">
+              <option value="default">-</option>
+              <option value="male">Masculino</option>
+              <option value="female">Feminino</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="age">Sua idade</label>
+            <input type="number" id="age" name="age" min="0" />
+          </div>
+          <div class="form-group">
+            <label for="weight">Seu peso</label>
+            <input type="number" id="weight" name="weight" min="0" />
+          </div>
+          <div class="form-group">
+            <label for="height">Sua altura</label>
+            <input type="number" id="height" name="height" min="0" />
+          </div>
+          <div class="form-group">
+            <label for="activity_level">Seu nível de atividade física</label>
+            <select id="activity_level">
+              <option value="null">-</option>
+              <option value="1.2">Sedentário</option>
+              <option value="1.375">Pouca atividade</option>
+              <option value="1.55">Atividade moderada</option>
+              <option value="1.725">Atividade intensa</option>
+              <option value="1.9">Atividade muito intensa</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <button type="submit">Calcular!</button>
+          </div>
+        </form>
+
+        <div class="result-container" id="result"></div>
+      </div>
+    </div>
+
+    <script src="../js/calculadoraCaloria.js"></script>
+    <script src="../js/navbarBurguer.js"></script>
+  </body>
+</html>

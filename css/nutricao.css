@@ -1,0 +1,141 @@
+.image-text-section-calc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.2rem 3rem 1.2rem;
+}
+
+.image-container-calc {
+  flex-basis: 50%;
+  padding-left: 6rem;
+  width: 334px;
+  border-radius: 20px;
+}
+
+.text-container-calc {
+  flex-basis: 50%;
+  padding: 0px 3rem;
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #202020;
+}
+
+.text-container-calc h2 {
+  font-size: 2rem;
+  padding-bottom: 0.6rem;
+}
+
+.image-text-section-diet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 3rem 3rem 3rem;
+}
+
+.image-container-diet {
+  flex-basis: 50%;
+  padding-right: 5rem;
+  padding-left: 3rem;
+}
+
+.text-container-diet {
+  flex-basis: 50%;
+
+  padding: 3rem 1.2rem 3rem 4rem;
+  font-family: "Righteous", cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #202020;
+}
+
+.text-container-diet h2 {
+  font-size: 2rem;
+  padding-bottom: 0.6rem;
+}
+
+/* responsivo - milha extra */
+
+@media (max-width: 768px) {
+  .hamburguer {
+    display: block;
+  }
+  .hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    border-radius: 0 0 20px 20px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .nav-item {
+    margin-top: 16px 0;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+  .container {
+    display: block;
+    margin-left: 40px;
+    margin-right: 40px;
+    align-items: column;
+    font-size: smaller;
+  }
+  .container-image {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+
+  header::before {
+    background-size: 30vw;
+    background-repeat: no-repeat;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .image-text-section-calc {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container-calc {
+    order: 1;
+  }
+
+  .text-container-calc {
+    padding-top: 3rem;
+    order: 2;
+  }
+
+  .image-text-section-diet {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container-diet {
+    order: 1;
+  }
+
+  .text-container-diet {
+    padding-top: 3rem;
+    order: 2;
+  }
+}
